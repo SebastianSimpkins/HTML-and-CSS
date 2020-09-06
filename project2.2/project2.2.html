@@ -1,0 +1,197 @@
+<DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Sebastian Simpkins</title>
+    <link rel='stylesheet' href='styles.css'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <nav>
+      <div class='logo'>
+        <h1>Sebastian</h1>
+      </div>
+      <ul class='nav-links'>
+        <li><a href='#1'>Home</a></li>
+        <li><a href='#2'>About Me</a></li>
+        <li><a href='#3'>Achievements</a></li>
+        <li><a href='#4'>Contact Me</a></li>
+      </ul>
+      <div class='burger'>
+        <div class='line1'></div>
+        <div class='line2'></div>
+        <div class='line3'></div>
+      </div>
+    </nav>
+    <script src='project2.2.js'></script>
+    <div id='1' class='wallpaper'>
+      <div class='sign'>
+      <h1 class='name'>Sebastian Simpkins</h1>
+      <br/>
+      <h2 class='strive'>I strive for change and innovation</h2>
+    </div>
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img class'me' src="images\fotose2.png" alt="Avatar" style="width:300px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>React Native Developer</h1>
+    </div>
+  </div>
+</div>
+    </div>
+
+    <article id='2' class='about-me'>
+      <div class='chapter'>About Me</div>
+      <div class='about-me-flex'>
+      <div class='hobbies'>
+      <h1 class='header'>My Hobbies</h1>
+      <br/>
+      <p class='content'>I have many hobbies, all of them are outdoors.  Because
+        of this, it is not always possible to do them as much as I would like.
+        I love to go scuba diving and try to go at least once every summer, if I
+        can, I will also fit in some sailing.  I also love the mountains and try
+        to go skiing, hiking and climbing as much as possible. However I do not
+        have an addictive personality and like to try out new things as much as
+        I can.</p>
+      </div>
+      <div class='who'>
+      <h1 class='header'>Who am I?</h1>
+      <br/>
+      <p class='content'>If I had to describe myself in a few words I would say
+        I am a very open minded person who looks at the world from a different
+        angle and who often questions the status quo.  I had a very good chance
+        to observe the world through my many adventures which bought me all
+        around the world.  I have been very lucky since I got to travel to many
+        different places while being so young.  Since the first euro I made I
+        put all my earning and savings into travel and explorations which led me
+        to visit around 27 countries before my 21st birthday.
+        I speak English, Italian and a little bit of Spanish.  I was born in
+        Italy but my nationality is British.  I am 21 years old, young but
+        thirsty to learn and improve to be the best I can be.</p>
+      </div>
+      <div class='future'>
+      <h1 class='header'>My Future</h1>
+      <br/>
+      <p class='content'>I have many plans for my future and I wish to realise
+        them all! I am currently working on becoming a React Native developer
+        through a startup called Start2Impact.  Within three months I will be
+        fluent enough to work with html, css, javascript, react and react native.
+        I wish to work for a good company who can see and use my potential and
+        give me the opportunity to show them what I have to offer.  There are
+        two reasons why I want to work in this field, the first is that I have
+        a passion for it and I think it is a great way to express your
+        creativity through something useful, secondly because it goes very well
+        with my passion for travelling as it is possible to follow this line of
+        work remotely.</p>
+      </div>
+      </div>
+    </article>
+
+    <section id='3' class='achievements'>
+      <div class='cv'>
+      <div class ='chapter'>My Achievements</div>
+      <embed src='CV.pdf' class='thumbnail' width='500px' height='500px'/>
+      </div>
+      <div class='skills'>
+        <div class='skill'>
+          <div class='skill-name'>HTML</div>
+          <div class='skill-bar'>
+            <div class='skill-per' per='70'></div>
+          </div>
+        </div>
+
+        <div class='skill'>
+          <div class='skill-name'>CSS</div>
+          <div class='skill-bar'>
+            <div class='skill-per' per='60'></div>
+          </div>
+        </div>
+
+        <div class='skill'>
+          <div class='skill-name'>Javascript</div>
+          <div class='skill-bar'>
+            <div class='skill-per' per='20'></div>
+          </div>
+        </div>
+      </div>
+      <script>
+        $('.skill-per').each(function() {
+          var $this = $(this);
+          var per = $this.attr('per');
+          $this.css("width",per+'%');
+          $({animatedValue: 0}).animate({animatedValue: per},{
+            duration: 1000,
+            step: function() {
+              $this.attr('per', Math.floor(this.animatedValue) + '%');
+            },
+            complete: function() {
+              $this.attr('per', Math.floor(this.animatedValue) + '%');
+            }
+          })
+        });
+
+      </script>
+    </section>
+
+    <section id='4' class='contact-me-page'>
+      <div class='chapter'>Contact Me</div>
+      <p class='info'>If you are interested in my services and would like to
+        contact me please feel free to contact me using the form below or by
+        directly sending me and email or a message. I don't have social media so
+        this is the best way to reach me.</p>
+        <div class='last-page'>
+      <div class='container'>
+        <div class='contact-box'>
+          <div class='left'></div>
+          <div class='right'>
+            <h3>Contact Me</h3>
+            <input type='text' class='field' placeholder='Your Name'>
+            <input type='email' class='field' placeholder='Your Email'>
+            <input type='text' class='field' placeholder='Your Phone'>
+            <textarea class='field area' placeholder='Message'></textarea>
+            <button class='btn'>Send</button>
+          </div>
+        </div>
+      </div>
+      <address class='contact'>
+        <div>
+        <img src='images/location.svg' width='50'/>
+        <p>Bologna, Italy</p>
+      </div>
+      <div>
+        <img src='images/at.svg' width='50'/>
+        <p>stf.simpkins@gmail.com</p>
+      </div>
+      <div>
+        <img src='images/phone.svg' width='50'/>
+        <p>+39 3518396110</p>
+      </div>
+      </address>
+      </div>
+    </section>
+    <footer class='footer'>
+      <div class='social-icons'>
+        <div class='fb'>
+        <a href="#" class="fa fa-facebook"></a>
+      </div>
+      <div class='twr'>
+        <a href="#" class="fa fa-twitter"></a>
+      </div>
+      <div class='ing'>
+        <a href='#' class="fa fa-instagram" aria-hidden="true"></a>
+      </div>
+      <div class='gh'>
+        <a href='#' class="fa fa-github" aria-hidden="true"></a>
+      </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
